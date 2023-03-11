@@ -1,0 +1,13 @@
+<h1>Password Strength Check Using ML</h1>
+
+<br />
+
+<button (click)="pingServer()">Ping Server To Test Connection</button>
+
+<br /><br /><br /><br />
+
+<input type="text" [(ngModel)]= 'password' placeholder="Enter password...">
+
+<button type="button" (click)="checkPasswordStrength()" style="margin-left: 0.5%">Check Password Strength</button>
+
+<router-outlet></router-outlet>

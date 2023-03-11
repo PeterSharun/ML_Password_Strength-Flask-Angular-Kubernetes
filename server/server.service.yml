@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: flask-server-v3
+spec:
+  type: LoadBalancer
+  selector:
+    app: flask-server-v3
+  ports:
+  - port: 5011
+    targetPort: 5011
