@@ -1,0 +1,7 @@
+# Client Related
+
+/client/node_modules
+/client/dist
+
+# Server Related
+/server/assets/pickled
