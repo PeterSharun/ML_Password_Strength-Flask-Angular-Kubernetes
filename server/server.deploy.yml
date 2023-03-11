@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flask-server-v3
+spec:
+  selector:
+    matchLabels:
+      app: flask-server-v3
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: flask-server-v3
+    spec:
+      containers:
+      - name: flask-server-v3
+        image: flask-server:3.0
+        resources:
+          limits:
+            # memory: "953Mi"
+            # cpu: "1000m"
+        ports:
+        - containerPort: 5011
