@@ -6,8 +6,14 @@
 
 <br /><br /><br /><br />
 
-<input type="text" [(ngModel)]= 'password' placeholder="Enter password...">
+<input type="text" [(ngModel)]="password" placeholder="Enter password..." />
 
-<button type="button" (click)="checkPasswordStrength()" style="margin-left: 0.5%">Check Password Strength</button>
+<button
+  type="button"
+  (click)="checkPasswordStrength()"
+  style="margin-left: 0.5%"
+>
+  Check Password Strength
+</button>
 
 <router-outlet></router-outlet>

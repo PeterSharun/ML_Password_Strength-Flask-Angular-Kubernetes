@@ -7,6 +7,17 @@ app = Flask(__name__)
 cors = CORS(app)
 app.config['CORS_HEADERS'] = 'Content-Type'
 
+
+@app.route('/pingServer', methods=['GET'])
+@cross_origin()
+def pingServer():
+    resp = {
+        "messId": "S",
+        "messText": "Success"
+    }
+    return jsonify(resp)
+
+
 @app.route('/validatePass', methods=['POST'])
 @cross_origin()
 def validatePass():
@@ -17,16 +28,6 @@ def validatePass():
         "messId": "S",
         "messText": "Success",
         "strength": output[0]
-    }
-    return jsonify(resp)
-
-
-@app.route('/pingServer', methods=['GET'])
-@cross_origin()
-def pingServer():
-    resp = {
-        "messId": "S",
-        "messText": "Success"
     }
     return jsonify(resp)
 

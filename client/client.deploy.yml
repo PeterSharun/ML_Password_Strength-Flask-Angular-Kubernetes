@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: client-service-v3
+  name: client-service-v4
 spec:
   selector:
     matchLabels:
-      app: client-service-v3
+      app: client-service-v4
   replicas: 2
   template:
     metadata:
       labels:
-        app: client-service-v3
+        app: client-service-v4
     spec:
       containers:
-      - name: client-service-v3
-        image: client:6.0
+      - name: client-service-v4
+        image: client:10.0
         resources:
           limits:
             memory: "128Mi"

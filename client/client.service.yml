@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: client-service-v3
+  name: client-service-v4
 spec:
   type: LoadBalancer
   selector:
-    app: client-service-v3
+    app: client-service-v4
   ports:
   - port: 8096
     targetPort: 80
